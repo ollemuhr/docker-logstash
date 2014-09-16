@@ -13,6 +13,7 @@ LOGSTASH_CONFIG_URL ?= https://gist.githubusercontent.com/ollemuhr/174fa3f1da405
 #
 ES_HOST ?= 127.0.0.1
 ES_PORT ?= 9200
+NC_PORT ?= 3333
 
 # The default logstash-forwarder keys are insecure. Please do not use in production.
 # Set the LF_SSL_CERT_KEY_URL and LF_SSL_CERT_URL env vars to use your secure keys.
@@ -27,7 +28,8 @@ define docker_run_flags
 -e LF_SSL_CERT_URL=${LF_SSL_CERT_URL} \
 -e LF_SSL_CERT_KEY_URL=${LF_SSL_CERT_KEY_URL} \
 -p ${ES_PORT}:${ES_PORT} \
--p 9292:9292
+-p 9292:9292 \
+-p ${NC_PORT}:${NC_PORT}
 endef
 
 ifdef ES_CONTAINER
