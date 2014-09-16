@@ -4,7 +4,8 @@ VERSION = 0.7.1
 # Set the LOGSTASH_CONFIG_URL env var to your logstash.conf file.
 # We will use our basic config if the value is empty.
 #
-LOGSTASH_CONFIG_URL ?= https://gist.github.com/pblittle/8778567/raw/logstash.conf
+LOGSTASH_CONFIG_URL ?= https://gist.githubusercontent.com/ollemuhr/174fa3f1da4051935d96/raw/5849934d74895d3a3e1f35b072b04401f30d60f6/logstash.conf
+#https://gist.github.com/pblittle/8778567/raw/logstash.conf
 
 # This default host and port are for using the embedded elasticsearch
 # in LogStash. Set the ES_HOST and ES_PORT to use a node outside of

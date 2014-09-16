@@ -33,5 +33,8 @@ EXPOSE 9300
 # Kibana
 EXPOSE 9292
 
+# netcat
+EXPOSE 3333
+
 # Start logstash
 ENTRYPOINT ["/app/bin/boot"]
